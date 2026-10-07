@@ -1,0 +1,15 @@
+{
+  "Meta": {
+    "title": "Soldé · Your invoices get paid",
+    "description": "Soldé chases your clients for you, politely and at the right time, until they pay."
+  },
+  "Hero": {
+    "title": "Your invoices get paid. You don't have to ask anymore.",
+    "lead": "Soldé chases your clients for you, politely and at the right time, until they pay.",
+    "cta": "Try 14 days free"
+  },
+  "Theme": {
+    "sombre": "Dark mode",
+    "clair": "Light mode"
+  }
+}

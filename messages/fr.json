@@ -1,0 +1,15 @@
+{
+  "Meta": {
+    "title": "Soldé · Tes factures se paient",
+    "description": "Soldé relance tes clients à ta place, poliment et au bon moment, jusqu'à ce qu'ils paient."
+  },
+  "Hero": {
+    "title": "Tes factures se paient. Tu n'as plus à demander.",
+    "lead": "Soldé relance tes clients à ta place, poliment et au bon moment, jusqu'à ce qu'ils paient.",
+    "cta": "Essayer 14 jours gratuits"
+  },
+  "Theme": {
+    "sombre": "Mode sombre",
+    "clair": "Mode clair"
+  }
+}
