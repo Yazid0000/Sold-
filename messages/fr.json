@@ -216,6 +216,56 @@
       "inclus": ["Tout Studio, sans limite d'utilisateurs", "Envoi depuis ton domaine", "Accès API et interlocuteur dédié"]
     }
   },
+  "Tarifs": {
+    "lead": "14 jours d'essai sur toutes les offres. Sans carte bancaire, résiliable en un clic.",
+    "comparer": "Comparer les offres",
+    "horsTaxes": "Prix hors taxes, par mois.",
+    "parMois": "par mois",
+    "parMoisAnnuel": "par mois, payé à l'année",
+    "selonEquipe": "selon l'équipe",
+    "essaiOffre": "Essayer 14 jours gratuits, offre {offre}",
+    "note": "Annuel : -20 % sur Solo et Studio, facturé en une fois. Les prix sont fictifs, comme le produit.",
+    "groupes": {
+      "relances": "Relances",
+      "encaissement": "Encaissement",
+      "equipe": "Équipe et marque"
+    },
+    "lignes": {
+      "facturesMois": { "label": "Factures relancées par mois" },
+      "email": { "label": "Relances par e-mail" },
+      "whatsapp": { "label": "Relances par WhatsApp" },
+      "calendrier": { "label": "Calendrier modifiable", "aide": "J+1, J+7, J+15 par défaut" },
+      "tons": { "label": "Tons Cordial, Neutre, Ferme" },
+      "personnalises": { "label": "Messages personnalisés par client" },
+      "lien": { "label": "Lien de paiement dans chaque relance" },
+      "detection": { "label": "Détection automatique du paiement", "aide": "Banque en lecture seule ou outil de facturation" },
+      "commission": { "label": "Commission sur les paiements" },
+      "utilisateurs": { "label": "Utilisateurs" },
+      "domaine": { "label": "Envoi depuis ton domaine" },
+      "rapports": { "label": "Rapports exportables" },
+      "api": { "label": "Accès API" },
+      "support": { "label": "Support" }
+    },
+    "valeurs": {
+      "oui": "Oui",
+      "non": "Non",
+      "illimite": "Illimité",
+      "zeroPct": "0 %",
+      "jusqua5": "Jusqu'à 5",
+      "email": "E-mail",
+      "prioritaire": "Prioritaire",
+      "dedie": "Dédié"
+    },
+    "garantie": {
+      "title": "Si Soldé ne te fait pas encaisser plus vite, tu ne paies rien.",
+      "text": "Pendant l'essai, compare ton délai de paiement avant et après. S'il ne baisse pas, tu pars sans avoir sorti ta carte.",
+      "abonnement": "Abonnement Soldé",
+      "essai": "Essai",
+      "ligne": "14 jours d'essai",
+      "total": "Total dû",
+      "tampon": "Rien à payer"
+    }
+  },
   "Faq": {
     "title": "Questions fréquentes",
     "accord": {

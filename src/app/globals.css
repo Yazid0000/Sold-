@@ -66,6 +66,18 @@
   --blend: normal;
 }
 
+/* Tableau Tarifs en mobile : les libellés prennent toute la largeur au-dessus des 3 colonnes.
+   On y repeint le fond de la colonne du milieu (Studio) pour qu'elle reste continue.
+   Arêtes nettes : deux couleurs au même pourcentage = pas de dégradé, un changement franc. */
+@utility bande-studio {
+  background-image: linear-gradient(
+    to right,
+    transparent 33.333%,
+    var(--color-soft) 33.333% 66.667%,
+    transparent 66.667%
+  );
+}
+
 @layer base {
   body {
     background: var(--color-background);

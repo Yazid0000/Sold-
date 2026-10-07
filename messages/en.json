@@ -216,6 +216,56 @@
       "inclus": ["Everything in Studio, unlimited users", "Send from your own domain", "API access and a dedicated contact"]
     }
   },
+  "Tarifs": {
+    "lead": "14-day trial on every plan. No credit card, cancel in one click.",
+    "comparer": "Compare plans",
+    "horsTaxes": "Prices excl. VAT, per month.",
+    "parMois": "per month",
+    "parMoisAnnuel": "per month, billed yearly",
+    "selonEquipe": "based on your team",
+    "essaiOffre": "Try 14 days free, {offre} plan",
+    "note": "Yearly: -20% on Solo and Studio, billed once. Prices are fictional, like the product.",
+    "groupes": {
+      "relances": "Reminders",
+      "encaissement": "Getting paid",
+      "equipe": "Team and brand"
+    },
+    "lignes": {
+      "facturesMois": { "label": "Invoices chased per month" },
+      "email": { "label": "Email reminders" },
+      "whatsapp": { "label": "WhatsApp reminders" },
+      "calendrier": { "label": "Editable schedule", "aide": "D+1, D+7, D+15 by default" },
+      "tons": { "label": "Friendly, Neutral, Firm tones" },
+      "personnalises": { "label": "Custom messages per client" },
+      "lien": { "label": "Payment link in every reminder" },
+      "detection": { "label": "Automatic payment detection", "aide": "Read-only bank access or invoicing tool" },
+      "commission": { "label": "Commission on payments" },
+      "utilisateurs": { "label": "Users" },
+      "domaine": { "label": "Send from your own domain" },
+      "rapports": { "label": "Exportable reports" },
+      "api": { "label": "API access" },
+      "support": { "label": "Support" }
+    },
+    "valeurs": {
+      "oui": "Yes",
+      "non": "No",
+      "illimite": "Unlimited",
+      "zeroPct": "0%",
+      "jusqua5": "Up to 5",
+      "email": "Email",
+      "prioritaire": "Priority",
+      "dedie": "Dedicated"
+    },
+    "garantie": {
+      "title": "If Soldé doesn't get you paid faster, you pay nothing.",
+      "text": "During the trial, compare your payment delay before and after. If it doesn't drop, you leave without ever taking out your card.",
+      "abonnement": "Soldé subscription",
+      "essai": "Trial",
+      "ligne": "14-day trial",
+      "total": "Total due",
+      "tampon": "Nothing to pay"
+    }
+  },
   "Faq": {
     "title": "Frequently asked questions",
     "accord": {

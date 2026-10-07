@@ -1,9 +1,11 @@
 import { useLocale, useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
+import Link from "next/link";
+import { getPathname } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import ThemeToggle from "./ThemeToggle";
 
 // chemin : la page actuelle, pour que FR/EN mène à la même page dans l'autre langue.
+// Link de Next (pas celui de next-intl, qui ajouterait /fr puis redirigerait) + getPathname pour l'adresse.
 export default function Footer({ chemin }: { chemin: "/" | "/tarifs" }) {
   const t = useTranslations("Footer");
   const locale = useLocale();
@@ -20,8 +22,7 @@ export default function Footer({ chemin }: { chemin: "/" | "/tarifs" }) {
             {routing.locales.map((code) => (
               <Link
                 key={code}
-                href={chemin}
-                locale={code}
+                href={getPathname({ href: chemin, locale: code })}
                 hrefLang={code}
                 aria-current={code === locale ? "true" : undefined}
                 className="flex h-10 min-w-11 items-center justify-center rounded-md px-2.5 font-mono text-[13px] font-medium uppercase text-foreground no-underline hover:text-foreground aria-[current=true]:bg-foreground aria-[current=true]:text-background"
