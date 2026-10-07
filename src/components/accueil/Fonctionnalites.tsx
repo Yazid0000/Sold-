@@ -1,5 +1,6 @@
 import { useFormatter, useTranslations } from "next-intl";
 import Tampon from "@/components/Tampon";
+import Interrupteurs from "./Interrupteurs";
 
 const carte = "rounded-md border border-border p-7";
 const titre = "mb-2 font-display text-[22px] font-semibold";
@@ -7,17 +8,9 @@ const texte = "leading-normal text-muted";
 
 export default function Fonctionnalites() {
   const t = useTranslations("Fonctionnalites");
-  const jours = useTranslations("Jours");
-  const canaux = useTranslations("Canaux");
   const format = useFormatter();
   const decimales = (v: number) => format.number(v, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   const euros = (v: number) => format.number(v, { style: "currency", currency: "EUR" });
-
-  const calendrier = [
-    { jour: jours("j1"), canal: canaux("email") },
-    { jour: jours("j7"), canal: canaux("whatsapp") },
-    { jour: jours("j15"), canal: canaux("email") },
-  ];
 
   const pastille = "whitespace-nowrap rounded-md px-[7px] py-[3px] text-[12.5px]";
   const factures = [
@@ -68,21 +61,7 @@ export default function Fonctionnalites() {
             <h3 className={titre}>{t("calendrier.title")}</h3>
             <p className={texte}>{t("calendrier.text")}</p>
           </div>
-          <div className="grid flex-[1_1_220px] gap-2 text-sm">
-            {calendrier.map((c) => (
-              <button
-                key={c.jour}
-                type="button"
-                aria-pressed="true"
-                className="flex min-h-11 items-center justify-between gap-3 rounded-md border border-border bg-background px-3 py-2 text-left"
-              >
-                <span><span className="inline-block w-11 font-mono">{c.jour}</span>{c.canal}</span>
-                <span aria-hidden className="relative h-5 w-[34px] flex-none rounded-md bg-accent">
-                  <span className="absolute top-[3px] left-[17px] size-3.5 rounded-sm bg-surface" />
-                </span>
-              </button>
-            ))}
-          </div>
+          <Interrupteurs />
         </article>
 
         <article className={`${carte} bg-surface wide:col-span-4`}>
