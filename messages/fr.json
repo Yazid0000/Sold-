@@ -294,7 +294,10 @@
     "note": "Sans carte bancaire. Prêt en 3 minutes.",
     "label": "Ton e-mail pro",
     "bouton": "Essayer 14 jours gratuits",
-    "aide": "On t'envoie le lien de connexion. Rien d'autre."
+    "aide": "Démo : ton adresse n'est ni envoyée ni enregistrée.",
+    "ok": "C'est noté. Comme Soldé est une démo, aucun e-mail ne part.",
+    "invalide": "Cette adresse ne ressemble pas à un e-mail. Vérifie l'arobase.",
+    "piege": "Ne pas remplir ce champ"
   },
   "Footer": {
     "demo": "Projet démo, produit fictif.",

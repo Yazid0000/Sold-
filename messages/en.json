@@ -294,7 +294,10 @@
     "note": "No credit card. Ready in 3 minutes.",
     "label": "Your work email",
     "bouton": "Try 14 days free",
-    "aide": "We'll send you the sign-in link. Nothing else."
+    "aide": "Demo: your address is neither sent nor stored.",
+    "ok": "Got it. Soldé is a demo, so no email goes out.",
+    "invalide": "That doesn't look like an email address. Check the @.",
+    "piege": "Leave this field empty"
   },
   "Footer": {
     "demo": "Demo project, fictional product.",
