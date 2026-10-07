@@ -3,10 +3,252 @@
     "title": "Soldé · Your invoices get paid",
     "description": "Soldé chases your clients for you, politely and at the right time, until they pay."
   },
+  "Nav": {
+    "fonctionnement": "How it works",
+    "tarifs": "Pricing",
+    "faq": "FAQ",
+    "cta": "Try 14 days free"
+  },
   "Hero": {
     "title": "Your invoices get paid. You don't have to ask anymore.",
     "lead": "Soldé chases your clients for you, politely and at the right time, until they pay.",
-    "cta": "Try 14 days free"
+    "cta": "Try 14 days free",
+    "note": "No credit card. Ready in 3 minutes.",
+    "echeance": "Due Sep 12, 2026",
+    "retard": "Overdue · 24 d",
+    "ligne1": "Visual identity, 4 days",
+    "ligne2": "Social media versions",
+    "total": "Total incl. VAT",
+    "relance1": "Friendly email",
+    "relance2": "Neutral WhatsApp",
+    "relance3": "Firm email",
+    "envoye": "sent",
+    "prevu": "scheduled"
+  },
+  "Chiffres": {
+    "retard": "Average payment delay",
+    "retardAvant": "12 d",
+    "retardApres": "3 d",
+    "relances": "Reminders written by hand",
+    "note": "Demo figures, fictional product."
+  },
+  "Probleme": {
+    "title": "Chasing a client is the worst email of your week.",
+    "lead": "You rewrite the same sentence four times, you agonize over the tone, you send it on a Friday at 11 pm. Then you wait. Your client simply forgot.",
+    "a": "To",
+    "objet": "Subject",
+    "sujet": "Invoice 2026-041",
+    "brouillons": [
+      "Hi, I'm just following up on…",
+      "Quick reminder about my invoice, in case…",
+      "I don't want to be pushy, but…"
+    ],
+    "debut": "Hi,",
+    "meta": "Draft #4 · saved at 23:47"
+  },
+  "Jours": {
+    "j1": "D+1",
+    "j7": "D+7",
+    "j15": "D+15"
+  },
+  "Fonctionnement": {
+    "eyebrow": "How it works",
+    "title": "Set it up once. Soldé follows up until you're paid.",
+    "etape1": {
+      "quand": "D0",
+      "title": "1. Connect",
+      "text": "Plug in your invoicing tool or import your invoices. Soldé spots the ones coming due.",
+      "sources": ["Invoicing tool", "CSV import", "Bank, read-only"]
+    },
+    "etape2": {
+      "quand": "D+1 → D+15",
+      "title": "2. Pick the tone",
+      "text": "Friendly at first, firmer later. You approve the templates, Soldé sends them."
+    },
+    "etape3": {
+      "quand": "Payment",
+      "title": "3. Get paid",
+      "text": "As soon as the money lands, the reminders stop. You get a notification, that's it.",
+      "virement": "Transfer received · Atelier Morel"
+    }
+  },
+  "Canaux": {
+    "email": "Email",
+    "whatsapp": "WhatsApp"
+  },
+  "Tons": {
+    "cordial": "Friendly",
+    "neutre": "Neutral",
+    "ferme": "Firm"
+  },
+  "Simulateur": {
+    "title": "How much is sitting with your clients?",
+    "lead": "Move the sliders. The math does itself, just like the reminders.",
+    "factures": "Invoices per month",
+    "montant": "Average amount",
+    "dort": "Money sitting with your clients",
+    "avecSolde": "With Soldé:",
+    "temps": "Time saved per month",
+    "heures": "{h}h {m}",
+    "minutes": "{m} min",
+    "hypotheses": "Assumptions: 4 invoices out of 10 paid late, 12 days late on average (3 with Soldé), 2 reminders per late invoice, 12 minutes per reminder."
+  },
+  "Fonctionnalites": {
+    "title": "What Soldé does while you work.",
+    "canaux": {
+      "title": "Email and WhatsApp",
+      "text": "Soldé uses the channel your client reads, at the time they read it.",
+      "emailMeta": "Email · D+1",
+      "emailSujet": "Quick reminder about invoice 2026-041",
+      "whatsappMeta": "WhatsApp · D+7",
+      "lu": "09:30 · read",
+      "whatsappTexte": "Hi Claire, invoice 2026-041 (€2,480) is still open. Here's the link to pay it: solde.app/p/41"
+    },
+    "arret": {
+      "title": "It stops on its own",
+      "text": "Payment received, reminders cancelled. Nobody gets one reminder too many.",
+      "relance": "D+15 · Firm email"
+    },
+    "calendrier": {
+      "title": "Your schedule, your rules",
+      "text": "D+1, D+7, D+15 by default. Shift them, add more, pause a client."
+    },
+    "tableau": {
+      "title": "Everything you're owed, on one screen",
+      "text": "Who owes what, since when, and where each reminder stands.",
+      "retard": "Overdue · 24 d",
+      "relancee": "Reminded D+7",
+      "payee": "Paid",
+      "echeance": "Due Oct 15",
+      "total": "To collect"
+    },
+    "paiement": {
+      "title": "Pay in one click",
+      "text": "Every reminder includes a payment link, card or bank transfer.",
+      "facture": "Invoice 2026-041",
+      "regler": "Pay {montant}"
+    }
+  },
+  "Tampon": {
+    "texte": "PAID",
+    "label": "Invoice paid"
+  },
+  "Ton": {
+    "title": "Will my clients take it badly?",
+    "lead": "No. You pick the tone of every reminder and see the message before it goes out. Try it:",
+    "groupe": "Reminder tone",
+    "de": "From",
+    "a": "To",
+    "objet": "Subject",
+    "destinataire": "Claire Dubois, Atelier Morel",
+    "regler": "Pay the invoice",
+    "messages": {
+      "cordial": {
+        "subject": "Quick reminder about invoice 2026-041",
+        "meta": "D+1 · email · sent at 9:12 am",
+        "body": [
+          "Hi Claire,",
+          "Hope all is well on your side. Invoice 2026-041 for €2,480.00 was due on September 12. You can pay it in one click just below.",
+          "Have a great day, Léa"
+        ]
+      },
+      "neutre": {
+        "subject": "Invoice 2026-041 awaiting payment",
+        "meta": "D+7 · email · sent at 9:30 am",
+        "body": [
+          "Hi Claire,",
+          "Invoice 2026-041 for €2,480.00, due on September 12, hasn't been paid yet. The payment link is below.",
+          "Thanks, Léa"
+        ]
+      },
+      "ferme": {
+        "subject": "Invoice 2026-041: payment expected within 48 hours",
+        "meta": "D+15 · email · sent at 9:00 am",
+        "body": [
+          "Hello Claire,",
+          "Invoice 2026-041 for €2,480.00 is now 15 days overdue. Please settle it within 48 hours. Late payment penalties may apply, in line with our terms.",
+          "Regards, Léa Martin"
+        ]
+      }
+    }
+  },
+  "Avis": {
+    "title": "They stopped chasing.",
+    "camille": {
+      "texte": "“My biggest client used to pay at 45 days. Now it's D+3, and they thank me for the reminder.”",
+      "role": "Graphic designer, Lyon"
+    },
+    "mehdi": {
+      "texte": "“I haven't written ‘just following up on this’ since March. I'm doing great.”",
+      "role": "Freelance developer, Lille"
+    },
+    "julie": {
+      "texte": "“With four of us, everyone thought someone else had followed up. Now nobody does, and the invoices get paid.”",
+      "role": "Agency co-founder, Nantes"
+    }
+  },
+  "Formules": {
+    "eyebrow": "Pricing",
+    "title": "One flat price. Zero commission on your invoices.",
+    "periode": "Billing period",
+    "mensuel": "Monthly",
+    "annuel": "Yearly -20%",
+    "sansEngagement": "per month, cancel anytime",
+    "parAn": "per month, {total} per year",
+    "essai": "Try 14 days free",
+    "devis": "Request a quote",
+    "comparer": "Compare plans in detail",
+    "solo": {
+      "nom": "Solo",
+      "pour": "For a solo freelancer.",
+      "inclus": ["20 invoices chased per month", "Email reminders", "Payment link included"]
+    },
+    "studio": {
+      "nom": "Studio",
+      "pour": "For busy freelancers and teams of 2 to 5.",
+      "inclus": ["Unlimited invoices", "Email and WhatsApp", "Custom messages per client", "Up to 5 users"]
+    },
+    "agence": {
+      "nom": "Agency",
+      "pour": "For teams of more than 5.",
+      "prix": "Custom quote",
+      "note": "based on the number of users",
+      "inclus": ["Everything in Studio, unlimited users", "Send from your own domain", "API access and a dedicated contact"]
+    }
+  },
+  "Faq": {
+    "title": "Frequently asked questions",
+    "accord": {
+      "q": "Does Soldé send messages without my approval?",
+      "r": "No. You choose the schedule and the tone, and you can preview every reminder. For a special client, pause them in one click."
+    },
+    "paiement": {
+      "q": "How does Soldé know an invoice is paid?",
+      "r": "Through your bank, read-only, or your invoicing tool. You can also mark an invoice as paid by hand. Reminders stop right away."
+    },
+    "whatsapp": {
+      "q": "Isn't WhatsApp a bit intrusive?",
+      "r": "Only if you turn it on for a client who gave you their number. By default, Soldé follows up by email."
+    },
+    "apres": {
+      "q": "What happens after the 14 days?",
+      "r": "Nothing, unless you pick a plan. We never asked for a card, so there's no surprise charge."
+    },
+    "donnees": {
+      "q": "Where is my data hosted?",
+      "r": "In Europe. You can export or delete it whenever you want, from your settings."
+    }
+  },
+  "Essai": {
+    "title": "The next reminder, you don't write it.",
+    "note": "No credit card. Ready in 3 minutes.",
+    "label": "Your work email",
+    "bouton": "Try 14 days free",
+    "aide": "We'll send you the sign-in link. Nothing else."
+  },
+  "Footer": {
+    "demo": "Demo project, fictional product.",
+    "langue": "Language"
   },
   "Theme": {
     "sombre": "Dark mode",

@@ -3,10 +3,252 @@
     "title": "Soldé · Tes factures se paient",
     "description": "Soldé relance tes clients à ta place, poliment et au bon moment, jusqu'à ce qu'ils paient."
   },
+  "Nav": {
+    "fonctionnement": "Fonctionnement",
+    "tarifs": "Tarifs",
+    "faq": "FAQ",
+    "cta": "Essayer 14 jours gratuits"
+  },
   "Hero": {
     "title": "Tes factures se paient. Tu n'as plus à demander.",
     "lead": "Soldé relance tes clients à ta place, poliment et au bon moment, jusqu'à ce qu'ils paient.",
-    "cta": "Essayer 14 jours gratuits"
+    "cta": "Essayer 14 jours gratuits",
+    "note": "Sans carte bancaire. Prêt en 3 minutes.",
+    "echeance": "Échéance le 12 sept. 2026",
+    "retard": "En retard · 24 j",
+    "ligne1": "Identité visuelle, 4 jours",
+    "ligne2": "Déclinaisons réseaux",
+    "total": "Total TTC",
+    "relance1": "E-mail cordial",
+    "relance2": "WhatsApp neutre",
+    "relance3": "E-mail ferme",
+    "envoye": "envoyé",
+    "prevu": "prévu"
+  },
+  "Chiffres": {
+    "retard": "Retard moyen de paiement",
+    "retardAvant": "12 j",
+    "retardApres": "3 j",
+    "relances": "Relances écrites à la main",
+    "note": "Chiffres de démonstration, produit fictif."
+  },
+  "Probleme": {
+    "title": "Relancer un client, c'est le pire e-mail de ta semaine.",
+    "lead": "Tu réécris la même phrase quatre fois, tu hésites sur le ton, tu l'envoies un vendredi à 23 h. Puis tu attends. Ton client, lui, a juste oublié.",
+    "a": "À",
+    "objet": "Objet",
+    "sujet": "Facture 2026-041",
+    "brouillons": [
+      "Bonjour, je me permets de revenir vers vous…",
+      "Petit rappel concernant ma facture, si jamais…",
+      "Je ne voudrais pas insister, mais…"
+    ],
+    "debut": "Bonjour,",
+    "meta": "Brouillon n° 4 · enregistré à 23:47"
+  },
+  "Fonctionnement": {
+    "eyebrow": "Comment ça marche",
+    "title": "Tu règles tout une fois. Soldé relance jusqu'au paiement.",
+    "etape1": {
+      "quand": "J0",
+      "title": "1. Connecter",
+      "text": "Branche ton outil de facturation ou importe tes factures. Soldé repère celles qui arrivent à échéance.",
+      "sources": ["Outil de facturation", "Import CSV", "Banque, lecture seule"]
+    },
+    "etape2": {
+      "quand": "J+1 → J+15",
+      "title": "2. Choisir le ton",
+      "text": "Cordial au début, plus ferme ensuite. Tu valides les modèles, Soldé les envoie."
+    },
+    "etape3": {
+      "quand": "Paiement",
+      "title": "3. Encaisser",
+      "text": "Dès que l'argent arrive, les relances s'arrêtent. Tu reçois une notification, c'est tout.",
+      "virement": "Virement reçu · Atelier Morel"
+    }
+  },
+  "Jours": {
+    "j1": "J+1",
+    "j7": "J+7",
+    "j15": "J+15"
+  },
+  "Canaux": {
+    "email": "E-mail",
+    "whatsapp": "WhatsApp"
+  },
+  "Tons": {
+    "cordial": "Cordial",
+    "neutre": "Neutre",
+    "ferme": "Ferme"
+  },
+  "Simulateur": {
+    "title": "Combien dort chez tes clients ?",
+    "lead": "Bouge les curseurs. Le calcul se fait tout seul, comme les relances.",
+    "factures": "Factures par mois",
+    "montant": "Montant moyen",
+    "dort": "Argent qui dort chez tes clients",
+    "avecSolde": "Avec Soldé :",
+    "temps": "Temps gagné par mois",
+    "heures": "{h} h {m}",
+    "minutes": "{m} min",
+    "hypotheses": "Hypothèses : 4 factures sur 10 en retard, retard moyen de 12 jours (3 avec Soldé), 2 relances par retard, 12 minutes par relance."
+  },
+  "Fonctionnalites": {
+    "title": "Ce que Soldé fait pendant que tu travailles.",
+    "canaux": {
+      "title": "E-mail et WhatsApp",
+      "text": "Soldé passe par le canal que ton client lit, à l'heure où il le lit.",
+      "emailMeta": "E-mail · J+1",
+      "emailSujet": "Petit rappel pour la facture 2026-041",
+      "whatsappMeta": "WhatsApp · J+7",
+      "lu": "09:30 · lu",
+      "whatsappTexte": "Bonjour Claire, la facture 2026-041 (2 480 €) attend toujours. Le lien pour la régler : solde.app/p/41"
+    },
+    "arret": {
+      "title": "Ça s'arrête tout seul",
+      "text": "Paiement reçu, relances annulées. Personne ne reçoit un rappel de trop.",
+      "relance": "J+15 · E-mail ferme"
+    },
+    "calendrier": {
+      "title": "Ton calendrier, tes règles",
+      "text": "J+1, J+7, J+15 par défaut. Tu décales, tu ajoutes, tu mets un client en pause."
+    },
+    "tableau": {
+      "title": "Tout ce qu'on te doit, sur un écran",
+      "text": "Qui doit quoi, depuis quand, et où en est la relance.",
+      "retard": "En retard · 24 j",
+      "relancee": "Relancée J+7",
+      "payee": "Payée",
+      "echeance": "Échéance 15 oct.",
+      "total": "À encaisser"
+    },
+    "paiement": {
+      "title": "Payer en un clic",
+      "text": "Chaque relance contient un lien de paiement, carte ou virement.",
+      "facture": "Facture 2026-041",
+      "regler": "Régler {montant}"
+    }
+  },
+  "Tampon": {
+    "texte": "SOLDÉ",
+    "label": "Facture soldée"
+  },
+  "Ton": {
+    "title": "Mes clients vont mal le prendre ?",
+    "lead": "Non. Tu choisis le ton de chaque relance et tu vois le message avant qu'il parte. Essaie :",
+    "groupe": "Ton de la relance",
+    "de": "De",
+    "a": "À",
+    "objet": "Objet",
+    "destinataire": "Claire Dubois, Atelier Morel",
+    "regler": "Régler la facture",
+    "messages": {
+      "cordial": {
+        "subject": "Petit rappel pour la facture 2026-041",
+        "meta": "J+1 · e-mail · envoyé à 9 h 12",
+        "body": [
+          "Bonjour Claire,",
+          "J'espère que tout va bien chez vous. La facture 2026-041 de 2 480,00 € est arrivée à échéance le 12 septembre. Vous pouvez la régler en un clic juste en dessous.",
+          "Belle journée, Léa"
+        ]
+      },
+      "neutre": {
+        "subject": "Facture 2026-041 en attente de règlement",
+        "meta": "J+7 · e-mail · envoyé à 9 h 30",
+        "body": [
+          "Bonjour Claire,",
+          "La facture 2026-041 de 2 480,00 €, échue le 12 septembre, n'a pas encore été réglée. Le lien de paiement est ci-dessous.",
+          "Merci, Léa"
+        ]
+      },
+      "ferme": {
+        "subject": "Facture 2026-041 : règlement attendu sous 48 h",
+        "meta": "J+15 · e-mail · envoyé à 9 h 00",
+        "body": [
+          "Bonjour Claire,",
+          "La facture 2026-041 de 2 480,00 € a maintenant 15 jours de retard. Merci de procéder au règlement sous 48 h. Des pénalités de retard pourront s'appliquer, conformément à nos conditions.",
+          "Cordialement, Léa Martin"
+        ]
+      }
+    }
+  },
+  "Avis": {
+    "title": "Ils ont arrêté de relancer.",
+    "camille": {
+      "texte": "« Mon plus gros client payait à 45 jours. Maintenant c'est à J+3, et il me remercie pour le rappel. »",
+      "role": "Graphiste, Lyon"
+    },
+    "mehdi": {
+      "texte": "« Je n'ai plus écrit “je me permets de revenir vers vous” depuis mars. Je m'en porte très bien. »",
+      "role": "Développeur freelance, Lille"
+    },
+    "julie": {
+      "texte": "« À quatre, chacun croyait qu'un autre avait relancé. Aujourd'hui personne ne relance, et les factures sont payées. »",
+      "role": "Cofondatrice d'agence, Nantes"
+    }
+  },
+  "Formules": {
+    "eyebrow": "Tarifs",
+    "title": "Un prix fixe. Zéro commission sur tes factures.",
+    "periode": "Période de facturation",
+    "mensuel": "Mensuel",
+    "annuel": "Annuel -20 %",
+    "sansEngagement": "par mois, sans engagement",
+    "parAn": "par mois, soit {total} par an",
+    "essai": "Essayer 14 jours gratuits",
+    "devis": "Demander un devis",
+    "comparer": "Comparer les offres en détail",
+    "solo": {
+      "nom": "Solo",
+      "pour": "Pour un freelance seul.",
+      "inclus": ["20 factures relancées par mois", "Relances par e-mail", "Lien de paiement inclus"]
+    },
+    "studio": {
+      "nom": "Studio",
+      "pour": "Pour les freelances chargés et les équipes de 2 à 5.",
+      "inclus": ["Factures illimitées", "E-mail et WhatsApp", "Messages personnalisés par client", "Jusqu'à 5 utilisateurs"]
+    },
+    "agence": {
+      "nom": "Agence",
+      "pour": "Pour les équipes de plus de 5 personnes.",
+      "prix": "Sur devis",
+      "note": "selon le nombre d'utilisateurs",
+      "inclus": ["Tout Studio, sans limite d'utilisateurs", "Envoi depuis ton domaine", "Accès API et interlocuteur dédié"]
+    }
+  },
+  "Faq": {
+    "title": "Questions fréquentes",
+    "accord": {
+      "q": "Soldé envoie-t-il des messages sans mon accord ?",
+      "r": "Non. Tu choisis le calendrier et le ton, et tu peux prévisualiser chaque relance. Pour un client à part, mets-le en pause en un clic."
+    },
+    "paiement": {
+      "q": "Comment Soldé sait qu'une facture est payée ?",
+      "r": "Via ta banque en lecture seule ou ton outil de facturation. Tu peux aussi marquer une facture payée à la main. Les relances s'arrêtent aussitôt."
+    },
+    "whatsapp": {
+      "q": "WhatsApp, ce n'est pas un peu intrusif ?",
+      "r": "Seulement si tu l'actives pour un client qui t'a donné son numéro. Par défaut, Soldé relance par e-mail."
+    },
+    "apres": {
+      "q": "Que se passe-t-il après les 14 jours ?",
+      "r": "Rien, sauf si tu choisis une offre. On ne t'a pas demandé de carte, donc pas de prélèvement surprise."
+    },
+    "donnees": {
+      "q": "Où sont hébergées mes données ?",
+      "r": "En Europe. Tu peux les exporter ou les supprimer quand tu veux, depuis tes réglages."
+    }
+  },
+  "Essai": {
+    "title": "La prochaine relance, tu ne l'écris pas.",
+    "note": "Sans carte bancaire. Prêt en 3 minutes.",
+    "label": "Ton e-mail pro",
+    "bouton": "Essayer 14 jours gratuits",
+    "aide": "On t'envoie le lien de connexion. Rien d'autre."
+  },
+  "Footer": {
+    "demo": "Projet démo, produit fictif.",
+    "langue": "Langue"
   },
   "Theme": {
     "sombre": "Mode sombre",

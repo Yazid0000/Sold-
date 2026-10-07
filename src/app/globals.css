@@ -20,6 +20,9 @@
   --color-rule: #ebe9e2;
   --color-ink-card: #14161a;
 
+  /* La maquette passe en mise en page large à 820 px : préfixe wide: */
+  --breakpoint-wide: 820px;
+
   --container-page: 1200px;
   --spacing-section: clamp(72px, 10vw, 128px);
 
