@@ -1,5 +1,7 @@
 import { setRequestLocale } from "next-intl/server";
-import { use } from "react";
+import DonneesStructurees from "@/components/DonneesStructurees";
+import { logiciel, questionsFrequentes } from "@/i18n/donneesStructurees";
+import { metadonnees } from "@/i18n/metadonnees";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Hero from "@/components/accueil/Hero";
@@ -14,11 +16,20 @@ import Formules from "@/components/accueil/Formules";
 import Faq from "@/components/accueil/Faq";
 import Essai from "@/components/accueil/Essai";
 
-export default function Accueil({ params }: { params: Promise<{ locale: string }> }) {
-  setRequestLocale(use(params).locale);
+type Props = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Props) {
+  return metadonnees("/", (await params).locale);
+}
+
+export default async function Accueil({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
 
   return (
     <>
+      <DonneesStructurees donnees={await logiciel(locale)} />
+      <DonneesStructurees donnees={await questionsFrequentes(locale)} />
       <Header page="accueil" />
       <main>
         <Hero />

@@ -1,7 +1,13 @@
 {
   "Meta": {
-    "title": "Soldé · Tes factures se paient",
-    "description": "Soldé relance tes clients à ta place, poliment et au bon moment, jusqu'à ce qu'ils paient."
+    "accueil": {
+      "title": "Soldé · Tes factures se paient",
+      "description": "Soldé relance tes clients à ta place, par e-mail et WhatsApp, jusqu'à ce qu'ils paient. 14 jours d'essai sans carte bancaire."
+    },
+    "tarifs": {
+      "title": "Soldé · Tarifs",
+      "description": "Solo à {solo}, Studio à {studio} par mois, Agence sur devis. Zéro commission sur tes factures, 14 jours d'essai sans carte bancaire."
+    }
   },
   "Nav": {
     "fonctionnement": "Fonctionnement",

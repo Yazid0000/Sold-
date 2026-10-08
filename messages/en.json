@@ -1,7 +1,13 @@
 {
   "Meta": {
-    "title": "Soldé · Your invoices get paid",
-    "description": "Soldé chases your clients for you, politely and at the right time, until they pay."
+    "accueil": {
+      "title": "Soldé · Your invoices get paid",
+      "description": "Soldé chases your clients for you, by email and WhatsApp, until they pay. 14-day trial, no credit card."
+    },
+    "tarifs": {
+      "title": "Soldé · Pricing",
+      "description": "Solo at {solo}, Studio at {studio} per month, Agency on quote. Zero commission on your invoices, 14-day trial, no credit card."
+    }
   },
   "Nav": {
     "fonctionnement": "How it works",
