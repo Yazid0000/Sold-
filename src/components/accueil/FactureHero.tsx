@@ -10,7 +10,7 @@ const lignes = [
   { cle: "ligne2", montant: 560 },
 ] as const;
 
-// La facture vit 3 étapes : 0 en retard, 1 relance J+7 envoyée (1,3 s), 2 payée avec le tampon (2,8 s).
+// La facture vit 3 étapes : 0 en retard, 1 relance J+7 envoyée (0,6 s), 2 payée avec le tampon (1,4 s).
 export default function FactureHero() {
   const t = useTranslations("Hero");
   const jours = useTranslations("Jours");
@@ -26,7 +26,7 @@ export default function FactureHero() {
   useEffect(() => {
     const minuteurs = reduit
       ? [setTimeout(() => setEtape(2), 0)]
-      : [setTimeout(() => setEtape(1), 1300), setTimeout(() => setEtape(2), 2800)];
+      : [setTimeout(() => setEtape(1), 600), setTimeout(() => setEtape(2), 1400)];
     return () => minuteurs.forEach(clearTimeout);
   }, [tour, reduit]);
 
