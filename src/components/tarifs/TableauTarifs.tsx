@@ -2,8 +2,10 @@
 
 import { useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
+import Rouleau from "@/components/Rouleau";
 import Segments from "@/components/Segments";
 import { formules } from "@/data/formules";
+import { centimesSiBesoin, euros } from "@/lib/euros";
 import { colonnes, enAvant, libelle, ligne } from "./colonnes";
 
 // Seuls la bascule et les prix de l'en-tête dépendent de la période.
@@ -14,8 +16,7 @@ export default function TableauTarifs({ children, corps }: { children: React.Rea
   const locale = useLocale();
   const [periode, setPeriode] = useState<"mensuel" | "annuel">("mensuel");
   const annuel = periode === "annuel";
-  const euros = (v: number) =>
-    new Intl.NumberFormat(locale, { style: "currency", currency: "EUR", minimumFractionDigits: Number.isInteger(v) ? 0 : 2 }).format(v);
+  const prix = (v: number) => euros(locale, centimesSiBesoin(v)).format(v);
 
   return (
     <>
@@ -52,7 +53,7 @@ export default function TableauTarifs({ children, corps }: { children: React.Rea
                   {offre.prix ? (
                     <>
                       <div className="mt-1 mb-0.5 font-mono text-[clamp(20px,3vw,32px)] font-medium tracking-[-0.03em] tabular-nums">
-                        {euros(annuel ? offre.prix.annuel : offre.prix.mensuel)}
+                        <Rouleau texte={prix(annuel ? offre.prix.annuel : offre.prix.mensuel)} />
                       </div>
                       <div className="text-[12.5px] text-muted">{t(annuel ? "parMoisAnnuel" : "parMois")}</div>
                     </>

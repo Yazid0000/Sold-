@@ -32,6 +32,52 @@
   --text-title: clamp(32px, 4vw, 52px);
   --text-title--line-height: 1.05;
   --text-title--letter-spacing: -0.03em;
+
+  /* Animations CSS de la maquette : classes animate-monte, animate-tampon, animate-tampon-retard, animate-clignote.
+     Le délai est dans le raccourci : une classe [animation-delay:…] à part serait écrasée par lui. */
+  --animate-monte: monte 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-tampon: tampon 0.35s cubic-bezier(0.2, 0.9, 0.3, 1.2) both;
+  --animate-tampon-retard: tampon 0.35s cubic-bezier(0.2, 0.9, 0.3, 1.2) 0.1s both;
+  --animate-clignote: clignote 1s steps(1) infinite;
+
+  /* Ombre portée de la facture du hero (classe shadow-carte). */
+  --shadow-carte: 0 18px 40px -24px rgba(40, 36, 24, 0.35);
+
+  @keyframes monte {
+    from {
+      opacity: 0;
+      translate: 0 14px;
+    }
+  }
+
+  /* Les étapes 55 % (écrasé) et 75 % (rebond) font l'impact d'un coup de tampon : sans elles, la chute paraît molle. */
+  @keyframes tampon {
+    0% {
+      opacity: 0;
+      rotate: -3deg;
+      scale: 2.2;
+    }
+    55% {
+      opacity: 1;
+      rotate: -10deg;
+      scale: 0.92;
+    }
+    75% {
+      rotate: -8deg;
+      scale: 1.04;
+    }
+    100% {
+      opacity: 1;
+      rotate: -9deg;
+      scale: 1;
+    }
+  }
+
+  @keyframes clignote {
+    50% {
+      opacity: 0;
+    }
+  }
 }
 
 /* Les polices sont posées par next/font sur <body> : "inline" garde la référence var(). */
@@ -78,6 +124,26 @@
   );
 }
 
+/* Défilement doux vers les ancres (#essai, #faq…), seulement si l'utilisateur accepte les animations. */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Mouvement réduit : toutes les animations et transitions CSS sautent directement à leur état final.
+   Les animations Motion sont coupées de leur côté (Mouvement.tsx et useReducedMotion). */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 @layer base {
   body {
     background: var(--color-background);
@@ -88,8 +154,12 @@
     color: var(--color-accent);
   }
 
-  a:hover {
-    color: var(--color-accent-hover);
+  /* Comme les classes hover: de Tailwind : seulement sur les appareils à souris,
+     sinon la couleur de survol reste collée au lien après un tap sur mobile. */
+  @media (hover: hover) {
+    a:hover {
+      color: var(--color-accent-hover);
+    }
   }
 
   :focus-visible {

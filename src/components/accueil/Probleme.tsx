@@ -1,8 +1,9 @@
 import { useTranslations } from "next-intl";
+import Brouillon from "./Brouillon";
 
 export default function Probleme() {
   const t = useTranslations("Probleme");
-  const brouillons = t.raw("brouillons") as string[];
+  const lignes = [...(t.raw("brouillons") as string[]), t("debut")];
 
   return (
     <section className="mx-auto max-w-page px-5 py-section">
@@ -13,15 +14,7 @@ export default function Probleme() {
           <div><span className="inline-block w-14 text-muted">{t("a")}</span>compta@atelier-morel.fr</div>
           <div><span className="inline-block w-14 text-muted">{t("objet")}</span>{t("sujet")}</div>
         </div>
-        <div className="grid gap-3.5 px-5 pt-6 pb-7 text-[clamp(16px,1.8vw,19px)] leading-[1.45]">
-          {brouillons.map((b) => (
-            <div key={b} className="text-muted line-through decoration-2">{b}</div>
-          ))}
-          <div>
-            {t("debut")}
-            <span aria-hidden className="ml-[3px] inline-block h-[1.1em] w-0.5 bg-foreground align-[-3px]" />
-          </div>
-        </div>
+        <Brouillon lignes={lignes} />
         <div className="border-t border-rule px-5 py-2.5 font-mono text-[13px] text-muted">{t("meta")}</div>
       </div>
     </section>

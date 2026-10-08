@@ -23,7 +23,7 @@ export default function Segments<T extends string>({ name, label, options, value
             onChange={() => onChange(o.value)}
             className="peer sr-only"
           />
-          <span className="flex h-11 cursor-pointer items-center whitespace-nowrap rounded-md px-4 font-medium peer-checked:bg-foreground peer-checked:text-background peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-accent">
+          <span className="flex h-11 cursor-pointer items-center whitespace-nowrap rounded-md px-4 font-medium transition-colors duration-200 peer-checked:bg-foreground peer-checked:text-background peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-accent">
             {o.label}
           </span>
         </label>

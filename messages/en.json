@@ -23,7 +23,10 @@
     "relance2": "Neutral WhatsApp",
     "relance3": "Firm email",
     "envoye": "sent",
-    "prevu": "scheduled"
+    "prevu": "scheduled",
+    "annule": "cancelled",
+    "datePaiement": "OCT 6 2026",
+    "rejouer": "Replay"
   },
   "Chiffres": {
     "retard": "Average payment delay",

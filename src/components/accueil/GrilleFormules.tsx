@@ -2,8 +2,10 @@
 
 import { useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
+import Rouleau from "@/components/Rouleau";
 import Segments from "@/components/Segments";
 import { emailDevis, formules } from "@/data/formules";
+import { centimesSiBesoin, euros } from "@/lib/euros";
 
 // children : le titre h2, rendu par le serveur.
 export default function GrilleFormules({ children }: { children: React.ReactNode }) {
@@ -12,10 +14,19 @@ export default function GrilleFormules({ children }: { children: React.ReactNode
   const [periode, setPeriode] = useState<"mensuel" | "annuel">("mensuel");
   const annuel = periode === "annuel";
 
-  // formatToParts découpe "9 €" en morceaux : le chiffre en grand, le symbole € en petit, à sa place selon la langue.
-  const prix = (v: number) =>
-    new Intl.NumberFormat(locale, { style: "currency", currency: "EUR", minimumFractionDigits: Number.isInteger(v) ? 0 : 2 }).formatToParts(v);
-  const euros = new Intl.NumberFormat(locale, { style: "currency", currency: "EUR" });
+  // formatToParts découpe "7,20 €" en morceaux. On regroupe ceux qui se suivent : le nombre ("7,20") en grand
+  // dans un Rouleau, le symbole € et l'espace en petit, chacun à sa place selon la langue.
+  const morceaux = (v: number) =>
+    euros(locale, centimesSiBesoin(v))
+      .formatToParts(v)
+      .reduce<{ petit: boolean; texte: string }[]>((liste, p) => {
+        const petit = p.type === "currency" || p.type === "literal";
+        const dernier = liste.at(-1);
+        if (dernier?.petit === petit) dernier.texte += p.value;
+        else liste.push({ petit, texte: p.value });
+        return liste;
+      }, []);
+  const totalAnnuel = euros(locale);
 
   const bouton = "mt-auto flex h-12 items-center justify-center whitespace-nowrap rounded-md text-[15px] font-semibold no-underline";
   const contour = `${bouton} border border-foreground text-foreground hover:bg-background hover:text-foreground`;
@@ -50,13 +61,15 @@ export default function GrilleFormules({ children }: { children: React.ReactNode
             </div>
             {f.prix ? (
               <div className="font-mono tabular-nums">
-                {prix(annuel ? f.prix.annuel : f.prix.mensuel).map((p, i) => (
-                  <span key={i} className={p.type === "currency" || p.type === "literal" ? "text-lg" : "text-[44px] font-medium tracking-[-0.04em]"}>
-                    {p.value}
-                  </span>
-                ))}
+                {morceaux(annuel ? f.prix.annuel : f.prix.mensuel).map((m, i) =>
+                  m.petit ? (
+                    <span key={i} className="text-lg">{m.texte}</span>
+                  ) : (
+                    <span key={i} className="text-[44px] font-medium tracking-[-0.04em]"><Rouleau texte={m.texte} /></span>
+                  ),
+                )}
                 <div className="mt-1 font-sans text-[13px] text-muted">
-                  {annuel ? t("parAn", { total: euros.format(f.prix.annuel * 12) }) : t("sansEngagement")}
+                  {annuel ? t("parAn", { total: totalAnnuel.format(f.prix.annuel * 12) }) : t("sansEngagement")}
                 </div>
               </div>
             ) : (

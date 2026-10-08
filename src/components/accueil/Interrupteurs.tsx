@@ -26,8 +26,8 @@ export default function Interrupteurs() {
           className="group flex min-h-11 cursor-pointer items-center justify-between gap-3 rounded-md border border-border bg-background px-3 py-2 text-left"
         >
           <span><span className="inline-block w-11 font-mono">{jours(r.jour)}</span>{canaux(r.canal)}</span>
-          <span aria-hidden className="relative h-5 w-[34px] flex-none rounded-md bg-border group-aria-checked:bg-accent">
-            <span className="absolute top-[3px] left-[3px] size-3.5 rounded-sm bg-surface group-aria-checked:left-[17px]" />
+          <span aria-hidden className="relative h-5 w-[34px] flex-none rounded-md bg-border transition-colors duration-200 group-aria-checked:bg-accent">
+            <span className="absolute top-[3px] left-[3px] size-3.5 rounded-sm bg-surface transition-transform duration-200 group-aria-checked:translate-x-3.5" />
           </span>
         </button>
       ))}

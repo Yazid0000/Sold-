@@ -23,7 +23,7 @@ export default function Garantie() {
           </div>
           <Tampon
             label={t("tampon")}
-            className="absolute right-[22px] bottom-[18px] -rotate-9 border-[2.5px] px-3 py-[5px] text-2xl opacity-95 shadow-[inset_0_0_0_1.5px_var(--color-surface),inset_0_0_0_3.5px_var(--color-accent)]"
+            className="absolute right-[22px] bottom-[18px] animate-tampon-retard border-[2.5px] px-3 py-[5px] text-2xl shadow-[inset_0_0_0_1.5px_var(--color-surface),inset_0_0_0_3.5px_var(--color-accent)]"
           />
         </div>
       </div>

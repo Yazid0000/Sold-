@@ -23,7 +23,10 @@
     "relance2": "WhatsApp neutre",
     "relance3": "E-mail ferme",
     "envoye": "envoyé",
-    "prevu": "prévu"
+    "prevu": "prévu",
+    "annule": "annulé",
+    "datePaiement": "06.10.2026",
+    "rejouer": "Rejouer"
   },
   "Chiffres": {
     "retard": "Retard moyen de paiement",
