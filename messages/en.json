@@ -100,7 +100,8 @@
     "temps": "Time saved per month",
     "heures": "{h}h {m}",
     "minutes": "{m} min",
-    "hypotheses": "Assumptions: 4 invoices out of 10 paid late, 12 days late on average (3 with Soldé), 2 reminders per late invoice, 12 minutes per reminder."
+    "hypotheses": "Assumptions: 4 invoices out of 10 paid late, 12 days late on average (3 with Soldé), 2 reminders per late invoice, 12 minutes per reminder.",
+    "ecart": "<montant>{valeur}</montant> less sitting with your clients, without writing a single reminder."
   },
   "Fonctionnalites": {
     "title": "What Soldé does while you work.",

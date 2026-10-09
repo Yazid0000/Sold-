@@ -100,7 +100,8 @@
     "temps": "Temps gagné par mois",
     "heures": "{h} h {m}",
     "minutes": "{m} min",
-    "hypotheses": "Hypothèses : 4 factures sur 10 en retard, retard moyen de 12 jours (3 avec Soldé), 2 relances par retard, 12 minutes par relance."
+    "hypotheses": "Hypothèses : 4 factures sur 10 en retard, retard moyen de 12 jours (3 avec Soldé), 2 relances par retard, 12 minutes par relance.",
+    "ecart": "<montant>{valeur}</montant> de moins qui dorment chez tes clients, sans écrire une seule relance."
   },
   "Fonctionnalites": {
     "title": "Ce que Soldé fait pendant que tu travailles.",

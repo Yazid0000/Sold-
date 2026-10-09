@@ -19,6 +19,7 @@ function simuler(factures: number, montant: number) {
 // children : le titre et le texte, rendus par le serveur et passés tels quels.
 export default function SimulateurCalcul({ children }: { children: React.ReactNode }) {
   const t = useTranslations("Simulateur");
+  const cta = useTranslations("Nav");
   const [factures, setFactures] = useState(12);
   const [montant, setMontant] = useState(1800);
 
@@ -54,21 +55,39 @@ export default function SimulateurCalcul({ children }: { children: React.ReactNo
           </label>
         </div>
       </div>
-      {/* aria-live : un lecteur d'écran annonce les nouveaux résultats. Chaque Rouleau lui donne la valeur finale
-          et lui cache ses colonnes de chiffres. */}
-      <div aria-live="polite" className="min-w-0 flex-[1_1_380px] rounded-md border border-border bg-surface p-[clamp(24px,3vw,36px)] font-mono tabular-nums">
-        <div className="mb-2 font-sans text-[15px] text-muted">{t("dort")}</div>
-        <div className="text-[clamp(40px,5.5vw,64px)] leading-none font-medium tracking-[-0.04em]">
-          <Rouleau texte={arrondi.format(dortSans)} />
+      <div className="grid min-w-0 flex-[1_1_380px] gap-5">
+        {/* aria-live : un lecteur d'écran annonce les nouveaux résultats. Chaque Rouleau lui donne la valeur finale
+            et lui cache ses colonnes de chiffres. */}
+        <div aria-live="polite" className="rounded-md border border-border bg-surface p-[clamp(24px,3vw,36px)] font-mono tabular-nums">
+          <div className="mb-2 font-sans text-[15px] text-muted">{t("dort")}</div>
+          <div className="text-[clamp(40px,5.5vw,64px)] leading-none font-medium tracking-[-0.04em]">
+            <Rouleau texte={arrondi.format(dortSans)} />
+          </div>
+          <div className="mt-3 mb-7 font-sans text-[15px]">
+            {t("avecSolde")} <span className="font-mono font-semibold text-accent"><Rouleau texte={arrondi.format(dortAvec)} /></span>
+          </div>
+          <div className="flex items-baseline justify-between gap-3 border-t border-dashed border-border pt-6">
+            <span className="font-sans text-[15px] text-muted">{t("temps")}</span>
+            <span className="text-[28px] font-medium"><Rouleau texte={duree(minutes)} /></span>
+          </div>
+          <p className="mt-6 font-sans text-[12.5px] leading-normal text-muted">{t("hypotheses")}</p>
         </div>
-        <div className="mt-3 mb-7 font-sans text-[15px]">
-          {t("avecSolde")} <span className="font-mono font-semibold text-accent"><Rouleau texte={arrondi.format(dortAvec)} /></span>
+        {/* Le moment où le visiteur voit son propre chiffre : on lui donne tout de suite l'action, hors de la zone
+            aria-live pour que cette phrase ne soit pas relue à chaque mouvement de curseur. */}
+        <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-4">
+          <p className="min-w-0 flex-[1_1_240px] text-[15px] leading-normal text-pretty">
+            {t.rich("ecart", {
+              valeur: arrondi.format(dortSans - dortAvec),
+              montant: (chunks) => <span className="whitespace-nowrap font-mono font-semibold text-accent tabular-nums">{chunks}</span>,
+            })}
+          </p>
+          <a
+            href="#essai"
+            className="inline-flex h-12 w-full items-center justify-center whitespace-nowrap rounded-md bg-accent px-5 text-[15px] font-semibold text-on-accent no-underline transition-colors hover:bg-accent-hover hover:text-on-accent wide:w-auto"
+          >
+            {cta("cta")}
+          </a>
         </div>
-        <div className="flex items-baseline justify-between gap-3 border-t border-dashed border-border pt-6">
-          <span className="font-sans text-[15px] text-muted">{t("temps")}</span>
-          <span className="text-[28px] font-medium"><Rouleau texte={duree(minutes)} /></span>
-        </div>
-        <p className="mt-6 font-sans text-[12.5px] leading-normal text-muted">{t("hypotheses")}</p>
       </div>
     </>
   );
