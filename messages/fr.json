@@ -114,15 +114,6 @@
       "lu": "09:30 · lu",
       "whatsappTexte": "Bonjour Claire, la facture 2026-041 (2 480 €) attend toujours. Le lien pour la régler : solde.app/p/41"
     },
-    "arret": {
-      "title": "Ça s'arrête tout seul",
-      "text": "Paiement reçu, relances annulées. Personne ne reçoit un rappel de trop.",
-      "relance": "J+15 · E-mail ferme"
-    },
-    "calendrier": {
-      "title": "Ton calendrier, tes règles",
-      "text": "J+1, J+7, J+15 par défaut. Tu décales, tu ajoutes, tu mets un client en pause."
-    },
     "tableau": {
       "title": "Tout ce qu'on te doit, sur un écran",
       "text": "Qui doit quoi, depuis quand, et où en est la relance.",

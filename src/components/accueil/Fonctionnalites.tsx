@@ -1,8 +1,8 @@
 import { useFormatter, useTranslations } from "next-intl";
-import Tampon from "@/components/Tampon";
 import Montant from "@/components/Montant";
-import Interrupteurs from "./Interrupteurs";
 
+// Trois tuiles, chacune pour ce que le reste de la page ne montre pas : les vrais messages (e-mail et WhatsApp),
+// le tableau de bord, le lien de paiement. L'arrêt des relances et le calendrier sont déjà dans « Comment ça marche ».
 const carte = "rounded-md border border-border p-7";
 const titre = "mb-2 font-display text-[22px] font-semibold";
 const texte = "leading-normal text-muted";
@@ -25,9 +25,9 @@ export default function Fonctionnalites() {
   return (
     <section className="mx-auto max-w-page px-5 pb-section">
       <h2 className="mb-10 max-w-[18ch] text-balance font-display text-title font-semibold">{t("title")}</h2>
-      <div className="grid grid-cols-1 gap-4 wide:grid-cols-6">
+      <div className="grid grid-cols-1 gap-4 wide:grid-cols-3">
 
-        <article className={`${carte} flex flex-col gap-6 bg-paper wide:col-span-3 wide:row-span-2`}>
+        <article className={`${carte} flex flex-col gap-6 bg-paper`}>
           <div>
             <h3 className={`${titre} text-2xl`}>{t("canaux.title")}</h3>
             <p className={`${texte} max-w-[38ch]`}>{t("canaux.text")}</p>
@@ -46,28 +46,7 @@ export default function Fonctionnalites() {
           </div>
         </article>
 
-        <article className={`${carte} flex flex-wrap items-center justify-between gap-6 bg-soft wide:col-span-3`}>
-          <div className="flex-[1_1_220px]">
-            <h3 className={titre}>{t("arret.title")}</h3>
-            <p className={texte}>{t("arret.text")}</p>
-          </div>
-          <div className="relative min-w-[200px] flex-[0_1_220px] rounded-md border border-border bg-surface p-4 pb-14 text-[13px]">
-            <div className="text-muted">Studio Bléone</div>
-            <div className="mt-1.5 font-mono text-xl font-semibold tabular-nums"><Montant texte={euros(640)} /></div>
-            <div className="mt-3.5 text-muted line-through">{t("arret.relance")}</div>
-            <Tampon className="absolute right-2.5 bottom-3 -rotate-9 border-2 px-[9px] py-1 text-[19px] opacity-95 shadow-[inset_0_0_0_1.5px_var(--color-surface),inset_0_0_0_3px_var(--color-accent)]" />
-          </div>
-        </article>
-
-        <article className={`${carte} flex flex-wrap items-center gap-6 bg-surface wide:col-span-3`}>
-          <div className="flex-[1_1_200px]">
-            <h3 className={titre}>{t("calendrier.title")}</h3>
-            <p className={texte}>{t("calendrier.text")}</p>
-          </div>
-          <Interrupteurs />
-        </article>
-
-        <article className={`${carte} bg-surface wide:col-span-4`}>
+        <article className={`${carte} bg-surface`}>
           <h3 className={titre}>{t("tableau.title")}</h3>
           <p className={`${texte} mb-5`}>{t("tableau.text")}</p>
           <div className="overflow-hidden rounded-md border border-border text-sm">
@@ -84,7 +63,7 @@ export default function Fonctionnalites() {
           </div>
         </article>
 
-        <article className="flex flex-col gap-6 rounded-md bg-ink-card p-7 text-[#eceae4] wide:col-span-2">
+        <article className="flex flex-col gap-6 rounded-md bg-ink-card p-7 text-[#eceae4]">
           <div>
             <h3 className={titre}>{t("paiement.title")}</h3>
             <p className="leading-normal opacity-85">{t("paiement.text")}</p>

@@ -114,15 +114,6 @@
       "lu": "09:30 · read",
       "whatsappTexte": "Hi Claire, invoice 2026-041 (€2,480) is still open. Here's the link to pay it: solde.app/p/41"
     },
-    "arret": {
-      "title": "It stops on its own",
-      "text": "Payment received, reminders cancelled. Nobody gets one reminder too many.",
-      "relance": "D+15 · Firm email"
-    },
-    "calendrier": {
-      "title": "Your schedule, your rules",
-      "text": "D+1, D+7, D+15 by default. Shift them, add more, pause a client."
-    },
     "tableau": {
       "title": "Everything you're owed, on one screen",
       "text": "Who owes what, since when, and where each reminder stands.",
