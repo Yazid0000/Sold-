@@ -308,7 +308,12 @@
     "bouton": "Essayer 14 jours gratuits",
     "aide": "Démo : ton adresse n'est ni envoyée ni enregistrée.",
     "ok": "C'est noté. Comme Soldé est une démo, aucun e-mail ne part.",
-    "invalide": "Cette adresse ne ressemble pas à un e-mail. Vérifie l'arobase.",
+    "vide": "Écris ton e-mail pro pour lancer l'essai.",
+    "arobase": "Il manque l'arobase (@) dans ton adresse.",
+    "format": "Cette adresse ne ressemble pas à un e-mail. Vérifie qu'elle n'a ni espace ni caractère spécial.",
+    "envoye": "Essai demandé",
+    "reseau": "Ta demande n'est pas partie : la connexion semble coupée. Vérifie-la, puis réessaie.",
+    "reessayer": "Réessayer",
     "piege": "Ne pas remplir ce champ"
   },
   "Footer": {

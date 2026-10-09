@@ -308,7 +308,12 @@
     "bouton": "Try 14 days free",
     "aide": "Demo: your address is neither sent nor stored.",
     "ok": "Got it. Soldé is a demo, so no email goes out.",
-    "invalide": "That doesn't look like an email address. Check the @.",
+    "vide": "Enter your work email to start the trial.",
+    "arobase": "Your address is missing the @.",
+    "format": "That doesn't look like an email address. Check it has no spaces or special characters.",
+    "envoye": "Trial requested",
+    "reseau": "Your request didn't go through: the connection seems to be down. Check it, then try again.",
+    "reessayer": "Try again",
     "piege": "Leave this field empty"
   },
   "Footer": {
