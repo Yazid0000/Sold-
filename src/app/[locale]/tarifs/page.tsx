@@ -21,7 +21,8 @@ export default async function Tarifs({ params }: Props) {
     <>
       <DonneesStructurees donnees={await logiciel(locale)} />
       <Header page="tarifs" />
-      <main>
+      {/* overflow-x-clip : un tampon qui tombe en partant de 2,2× sa taille ne doit pas élargir la page, même une image. */}
+      <main className="overflow-x-clip">
         <Comparatif />
         <Garantie />
       </main>

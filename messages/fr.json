@@ -267,13 +267,15 @@
     },
     "garantie": {
       "title": "Si Soldé ne te fait pas encaisser plus vite, tu ne paies rien.",
-      "text": "Pendant l'essai, compare ton délai de paiement avant et après. S'il ne baisse pas, tu pars sans avoir sorti ta carte.",
-      "abonnement": "Abonnement Soldé",
-      "essai": "Essai",
-      "ligne": "14 jours d'essai",
-      "total": "Total dû",
-      "tampon": "Rien à payer"
+      "text": "Pendant l'essai, compare ton délai de paiement avant et après. S'il ne baisse pas, tu pars sans avoir sorti ta carte."
     }
+  },
+  "Recu": {
+    "abonnement": "Abonnement Soldé",
+    "essai": "Essai",
+    "ligne": "14 jours d'essai",
+    "total": "Total dû",
+    "tampon": "Rien à payer"
   },
   "Faq": {
     "title": "Questions fréquentes",

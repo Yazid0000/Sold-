@@ -267,13 +267,15 @@
     },
     "garantie": {
       "title": "If Soldé doesn't get you paid faster, you pay nothing.",
-      "text": "During the trial, compare your payment delay before and after. If it doesn't drop, you leave without ever taking out your card.",
-      "abonnement": "Soldé subscription",
-      "essai": "Trial",
-      "ligne": "14-day trial",
-      "total": "Total due",
-      "tampon": "Nothing to pay"
+      "text": "During the trial, compare your payment delay before and after. If it doesn't drop, you leave without ever taking out your card."
     }
+  },
+  "Recu": {
+    "abonnement": "Soldé subscription",
+    "essai": "Trial",
+    "ligne": "14-day trial",
+    "total": "Total due",
+    "tampon": "Nothing to pay"
   },
   "Faq": {
     "title": "Frequently asked questions",
