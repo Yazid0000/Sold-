@@ -1,5 +1,6 @@
 import { useFormatter, useTranslations } from "next-intl";
 import { Frise, Trait } from "./Frise";
+import Montant from "@/components/Montant";
 
 function Etape({ index, quand, titre, texte, accent = false, children }: {
   index: number; quand: string; titre: string; texte: string; accent?: boolean; children: React.ReactNode;
@@ -55,7 +56,7 @@ export default function Fonctionnement() {
             <div className="flex items-center justify-between gap-3 rounded-md border border-border bg-soft px-3.5 py-3 text-sm">
               <span>{t("etape3.virement")}</span>
               <span className="font-mono font-semibold text-accent tabular-nums">
-                {format.number(2480, { style: "currency", currency: "EUR", signDisplay: "always" })}
+                <Montant texte={format.number(2480, { style: "currency", currency: "EUR", signDisplay: "always" })} />
               </span>
             </div>
           </Etape>

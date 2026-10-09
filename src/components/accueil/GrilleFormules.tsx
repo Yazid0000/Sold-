@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import Rouleau from "@/components/Rouleau";
+import Montant from "@/components/Montant";
 import Segments from "@/components/Segments";
 import { emailDevis, formules } from "@/data/formules";
 import { centimesSiBesoin, euros } from "@/lib/euros";
@@ -10,6 +11,7 @@ import { centimesSiBesoin, euros } from "@/lib/euros";
 // children : le titre h2, rendu par le serveur.
 export default function GrilleFormules({ children }: { children: React.ReactNode }) {
   const t = useTranslations("Formules");
+  const tarifs = useTranslations("Tarifs");
   const locale = useLocale();
   const [periode, setPeriode] = useState<"mensuel" | "annuel">("mensuel");
   const annuel = periode === "annuel";
@@ -63,7 +65,7 @@ export default function GrilleFormules({ children }: { children: React.ReactNode
               <div className="font-mono tabular-nums">
                 {morceaux(annuel ? f.prix.annuel : f.prix.mensuel).map((m, i) =>
                   m.petit ? (
-                    <span key={i} className="text-lg">{m.texte}</span>
+                    <span key={i} className="text-lg"><Montant texte={m.texte} /></span>
                   ) : (
                     <span key={i} className="text-[44px] font-medium tracking-[-0.04em]"><Rouleau texte={m.texte} /></span>
                   ),
@@ -82,7 +84,7 @@ export default function GrilleFormules({ children }: { children: React.ReactNode
               {(t.raw(`${f.id}.inclus`) as string[]).map((ligne) => <li key={ligne}>{ligne}</li>)}
             </ul>
             {f.prix ? (
-              <a href="#essai" className={f.miseEnAvant ? plein : contour}>{t("essai")}</a>
+              <a href="#essai" aria-label={tarifs("essaiOffre", { offre: t(`${f.id}.nom`) })} className={f.miseEnAvant ? plein : contour}>{t("essai")}</a>
             ) : (
               <a href={`mailto:${emailDevis}`} className={contour}>{t("devis")}</a>
             )}

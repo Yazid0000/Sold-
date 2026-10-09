@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
+import { INSECABLES, largeurEspace } from "./Montant";
 
 const chiffres = "0123456789";
 
@@ -19,7 +20,7 @@ export default function Rouleau({ texte }: { texte: string }) {
           // Clé comptée depuis la droite : les unités restent les unités quand le nombre gagne un chiffre.
           const cle = caracteres.length - i;
           const n = chiffres.indexOf(c);
-          if (n === -1) return <span key={cle} className="whitespace-pre">{c}</span>;
+          if (n === -1) return <span key={cle} className={INSECABLES.test(c) ? largeurEspace(c) : "whitespace-pre"}>{c}</span>;
           return (
             // clip-path coupe ce qui dépasse sans changer la ligne de base (overflow: hidden la décalerait).
             // items-start : sans lui, la colonne serait étirée à la hauteur de la fenêtre (1 ligne au lieu de 10).

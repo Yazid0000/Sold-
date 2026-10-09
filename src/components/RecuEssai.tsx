@@ -1,5 +1,6 @@
 import { useFormatter, useTranslations } from "next-intl";
 import Tampon from "./Tampon";
+import Montant from "./Montant";
 
 type Props = {
   // Le tampon "SOLDÉ" est posé : sur la garantie (Tarifs) toujours, sur l'accueil une fois l'essai demandé.
@@ -25,10 +26,10 @@ export default function RecuEssai({ paye, client, chute, className = "" }: Props
         <span className="min-w-0 truncate font-mono" title={client}>{client || t("essai")}</span>
       </div>
       <div className="mt-[18px] grid gap-2 font-mono text-sm tabular-nums">
-        <div className="flex justify-between"><span className="font-sans text-muted">{t("ligne")}</span><span>{format.number(0, { minimumFractionDigits: 2 })}</span></div>
+        <div className="flex justify-between"><span className="font-sans text-muted">{t("ligne")}</span><span><Montant texte={format.number(0, { minimumFractionDigits: 2 })} /></span></div>
         <div className="flex justify-between border-t border-rule pt-2.5 text-lg font-semibold">
           <span className="font-sans">{t("total")}</span>
-          <span>{format.number(0, { style: "currency", currency: "EUR" })}</span>
+          <span><Montant texte={format.number(0, { style: "currency", currency: "EUR" })} /></span>
         </div>
       </div>
       {paye && (

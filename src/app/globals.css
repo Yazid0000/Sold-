@@ -166,4 +166,14 @@
     outline: 2px solid var(--color-accent);
     outline-offset: 2px;
   }
+
+  /* Ce que le navigateur dessine seul (sélection, curseur de saisie) reprend aussi les couleurs du site. */
+  ::selection {
+    background: var(--color-accent);
+    color: var(--color-on-accent);
+  }
+
+  input {
+    caret-color: var(--color-accent);
+  }
 }

@@ -10,6 +10,7 @@ target_fingerprint: "sha256:5685c7c1a1815329464083b081f71ea992b5d3661e195a3d2cdc
 target_path: "C:\\Users\\DELL\\Documents\\solde-landing\\src\\app\\[locale]\\page.tsx"
 timestamp: 2026-10-09T01-57-14Z
 slug: src-app-locale-page-tsx
+closed: true
 ---
 Method: dual-agent (A : revue de design · B : détecteur et navigateur)
 

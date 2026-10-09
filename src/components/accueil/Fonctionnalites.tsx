@@ -1,5 +1,6 @@
 import { useFormatter, useTranslations } from "next-intl";
 import Tampon from "@/components/Tampon";
+import Montant from "@/components/Montant";
 import Interrupteurs from "./Interrupteurs";
 
 const carte = "rounded-md border border-border p-7";
@@ -26,12 +27,14 @@ export default function Fonctionnalites() {
       <h2 className="mb-10 max-w-[18ch] text-balance font-display text-title font-semibold">{t("title")}</h2>
       <div className="grid grid-cols-1 gap-4 wide:grid-cols-6">
 
-        <article className={`${carte} flex flex-col gap-6 bg-paper bg-[repeating-linear-gradient(0deg,transparent_0_31px,var(--color-rule)_31px_32px)] wide:col-span-3 wide:row-span-2`}>
+        <article className={`${carte} flex flex-col gap-6 bg-paper wide:col-span-3 wide:row-span-2`}>
           <div>
             <h3 className={`${titre} text-2xl`}>{t("canaux.title")}</h3>
             <p className={`${texte} max-w-[38ch]`}>{t("canaux.text")}</p>
           </div>
-          <div className="mt-auto grid gap-3 text-sm">
+          {/* Le papier ligné sous le texte, jusqu'aux bords de la carte (-mx-7 -mb-7), messages en bas (content-end) :
+              derrière le titre et le texte, les lignes gênaient la lecture. */}
+          <div className="-mx-7 -mb-7 grid flex-1 content-end gap-3 rounded-b-md bg-[repeating-linear-gradient(0deg,transparent_0_31px,var(--color-rule)_31px_32px)] px-7 pt-6 pb-7 text-sm">
             <div className="max-w-[340px] rounded-md border border-border bg-surface px-3.5 py-3">
               <div className="mb-1 flex justify-between text-xs text-muted"><span>{t("canaux.emailMeta")}</span><span className="font-mono">09:12</span></div>
               <div className="font-medium">{t("canaux.emailSujet")}</div>
@@ -48,11 +51,11 @@ export default function Fonctionnalites() {
             <h3 className={titre}>{t("arret.title")}</h3>
             <p className={texte}>{t("arret.text")}</p>
           </div>
-          <div className="relative min-w-[200px] flex-[0_1_220px] rounded-md border border-border bg-surface p-4 text-[13px]">
+          <div className="relative min-w-[200px] flex-[0_1_220px] rounded-md border border-border bg-surface p-4 pb-14 text-[13px]">
             <div className="text-muted">Studio Bléone</div>
-            <div className="mt-1.5 font-mono text-xl font-semibold tabular-nums">{euros(640)}</div>
+            <div className="mt-1.5 font-mono text-xl font-semibold tabular-nums"><Montant texte={euros(640)} /></div>
             <div className="mt-3.5 text-muted line-through">{t("arret.relance")}</div>
-            <Tampon className="absolute top-[22px] right-2.5 -rotate-9 border-2 px-[9px] py-1 text-[19px] opacity-95 shadow-[inset_0_0_0_1.5px_var(--color-surface),inset_0_0_0_3px_var(--color-accent)]" />
+            <Tampon className="absolute right-2.5 bottom-3 -rotate-9 border-2 px-[9px] py-1 text-[19px] opacity-95 shadow-[inset_0_0_0_1.5px_var(--color-surface),inset_0_0_0_3px_var(--color-accent)]" />
           </div>
         </article>
 
@@ -71,12 +74,12 @@ export default function Fonctionnalites() {
             {factures.map((f) => (
               <div key={f.client} className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 border-b border-rule px-3.5 py-2.5">
                 <span className="flex flex-wrap items-center gap-x-2.5 gap-y-1"><span>{f.client}</span><span className={f.style}>{f.etat}</span></span>
-                <span className="whitespace-nowrap text-right font-mono tabular-nums">{decimales(f.montant)}</span>
+                <span className="whitespace-nowrap text-right font-mono tabular-nums"><Montant texte={decimales(f.montant)} /></span>
               </div>
             ))}
             <div className="flex justify-between bg-background px-3.5 py-3 font-semibold">
               <span>{t("tableau.total")}</span>
-              <span className="font-mono tabular-nums">{euros(total)}</span>
+              <span className="font-mono tabular-nums"><Montant texte={euros(total)} /></span>
             </div>
           </div>
         </article>
@@ -89,7 +92,7 @@ export default function Fonctionnalites() {
           <div className="mt-auto grid gap-3 rounded-md bg-background p-4 text-foreground">
             <div className="flex justify-between text-[13px] text-muted"><span>{t("paiement.facture")}</span><span>Atelier Morel</span></div>
             <div className="flex h-11 items-center justify-center rounded-md bg-accent font-mono text-[15px] font-semibold text-on-accent">
-              {t("paiement.regler", { montant: euros(2480) })}
+              <Montant texte={t("paiement.regler", { montant: euros(2480) })} />
             </div>
           </div>
         </article>

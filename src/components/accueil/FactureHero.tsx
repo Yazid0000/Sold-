@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { useFormatter, useTranslations } from "next-intl";
 import Tampon from "@/components/Tampon";
+import Montant from "@/components/Montant";
 
 const lignes = [
   { cle: "ligne1", montant: 1920 },
@@ -46,12 +47,9 @@ export default function FactureHero() {
   return (
     <div className="flex min-w-0 max-w-[520px] flex-[1_1_380px] flex-col gap-2.5">
       <div className="relative pt-10">
-        <div aria-hidden className="absolute top-0 right-[2%] left-[8%] h-[300px] rotate-4 rounded-md border border-border bg-surface p-5 shadow-[0_1px_0_var(--color-border)]">
-          <div className="flex justify-between text-[13px] text-muted"><span>Studio Bléone</span><span className="font-mono">2026-038</span></div>
-        </div>
-        <div aria-hidden className="absolute top-3.5 right-[6%] left-[3%] h-[300px] -rotate-[2.5deg] rounded-md border border-border bg-surface p-5">
-          <div className="flex justify-between text-[13px] text-muted"><span>Maison Ferrand</span><span className="font-mono">2026-039</span></div>
-        </div>
+        {/* La pile des autres factures : de simples feuilles. Leur texte était toujours à moitié caché par la carte de devant. */}
+        <div aria-hidden className="absolute top-0 right-[2%] left-[8%] h-[300px] rotate-4 rounded-md border border-border bg-surface shadow-[0_1px_0_var(--color-border)]" />
+        <div aria-hidden className="absolute top-3.5 right-[6%] left-[3%] h-[300px] -rotate-[2.5deg] rounded-md border border-border bg-surface" />
 
         <div className="relative rounded-md border border-border bg-surface p-6 shadow-carte">
           <div className="mb-5 flex min-h-11 items-start justify-between gap-3">
@@ -75,12 +73,12 @@ export default function FactureHero() {
             {lignes.map(({ cle, montant }) => (
               <div key={cle} className="flex justify-between gap-3 border-b border-rule py-2.5">
                 <span className="font-sans text-muted">{t(cle)}</span>
-                <span>{format.number(montant, decimales)}</span>
+                <span><Montant texte={format.number(montant, decimales)} /></span>
               </div>
             ))}
             <div className="flex items-baseline justify-between gap-3 pt-3.5 pb-1">
               <span className="font-sans font-medium">{t("total")}</span>
-              <span className="text-2xl font-semibold">{format.number(2480, { style: "currency", currency: "EUR" })}</span>
+              <span className="text-2xl font-semibold"><Montant texte={format.number(2480, { style: "currency", currency: "EUR" })} /></span>
             </div>
           </div>
           <ul className="mt-[18px] grid gap-2 border-t border-dashed border-border pt-3.5 text-[13px]">

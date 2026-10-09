@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import Rouleau from "@/components/Rouleau";
+import Montant from "@/components/Montant";
 import { euros } from "@/lib/euros";
 
 // Hypothèses de la maquette : 4 factures sur 10 en retard, 12 jours de retard (3 avec Soldé),
@@ -41,7 +42,7 @@ export default function SimulateurCalcul({ children }: { children: React.ReactNo
             <input type="range" min={1} max={60} step={1} value={factures} onChange={(e) => setFactures(+e.target.value)} className={curseur} />
           </label>
           <label className="grid gap-3">
-            <span className={label}><span>{t("montant")}</span><span className="font-mono tabular-nums">{arrondi.format(montant)}</span></span>
+            <span className={label}><span>{t("montant")}</span><span className="font-mono tabular-nums"><Montant texte={arrondi.format(montant)} /></span></span>
             <input
               type="range"
               min={100}
