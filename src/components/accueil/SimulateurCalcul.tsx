@@ -79,7 +79,11 @@ export default function SimulateurCalcul({ children }: { children: React.ReactNo
           <p className="min-w-0 flex-[1_1_240px] text-[15px] leading-normal text-pretty">
             {t.rich("ecart", {
               valeur: arrondi.format(dortSans - dortAvec),
-              montant: (chunks) => <span className="whitespace-nowrap font-mono font-semibold text-accent tabular-nums">{chunks}</span>,
+              montant: () => (
+                <span className="whitespace-nowrap font-mono font-semibold text-accent tabular-nums">
+                  <Montant texte={arrondi.format(dortSans - dortAvec)} />
+                </span>
+              ),
             })}
           </p>
           <a

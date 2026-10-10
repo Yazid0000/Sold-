@@ -112,7 +112,7 @@
       "emailSujet": "Petit rappel pour la facture 2026-041",
       "whatsappMeta": "WhatsApp · J+7",
       "lu": "09:30 · lu",
-      "whatsappTexte": "Bonjour Claire, la facture 2026-041 (2 480 €) attend toujours. Le lien pour la régler : solde.app/p/41"
+      "whatsappTexte": "Bonjour Claire, la facture 2026-041 (2 480 €) attend toujours. Le lien pour la régler : solde.app/p/41"
     },
     "tableau": {
       "title": "Tout ce qu'on te doit, sur un écran",
@@ -310,6 +310,12 @@
   "Footer": {
     "demo": "Projet démo, produit fictif.",
     "langue": "Langue"
+  },
+  "Introuvable": {
+    "facture": "Facture n° 404 · introuvable",
+    "title": "Cette page n'existe pas.",
+    "text": "Elle a peut-être été déplacée, ou l'adresse contient une faute de frappe.",
+    "retour": "Retour à l'accueil"
   },
   "Theme": {
     "sombre": "Mode sombre",

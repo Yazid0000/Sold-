@@ -167,6 +167,11 @@
     outline-offset: 2px;
   }
 
+  /* Un champ en erreur garde un anneau rouge au focus : le vert dirait « tout va bien » à côté du message d'erreur. */
+  [aria-invalid="true"]:focus-visible {
+    outline-color: var(--color-late);
+  }
+
   /* Ce que le navigateur dessine seul (sélection, curseur de saisie) reprend aussi les couleurs du site. */
   ::selection {
     background: var(--color-accent);

@@ -22,12 +22,22 @@ export default function Header({ page }: { page: "accueil" | "tarifs" }) {
           </Link>
           <Link href="/#faq" className={lien}>{t("faq")}</Link>
         </nav>
-        <Link
-          href="/#essai"
-          className="inline-flex h-10 items-center whitespace-nowrap rounded-md bg-accent px-4 text-sm font-semibold text-on-accent no-underline hover:bg-accent-hover hover:text-on-accent"
-        >
-          {t("cta")}
-        </Link>
+        <div className="flex items-center gap-4">
+          {/* Sur mobile, le menu est masqué : les tarifs restent à un geste au lieu de 10 000 px de défilement. */}
+          <Link
+            href="/tarifs"
+            aria-current={page === "tarifs" ? "page" : undefined}
+            className={`${lien} inline-flex h-11 items-center text-[15px] wide:hidden aria-[current=page]:underline aria-[current=page]:underline-offset-[6px]`}
+          >
+            {t("tarifs")}
+          </Link>
+          <Link
+            href="/#essai"
+            className="inline-flex h-10 items-center whitespace-nowrap rounded-md bg-accent px-4 text-sm font-semibold text-on-accent no-underline hover:bg-accent-hover hover:text-on-accent"
+          >
+            {t("cta")}
+          </Link>
+        </div>
       </div>
     </header>
   );

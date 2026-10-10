@@ -311,6 +311,12 @@
     "demo": "Demo project, fictional product.",
     "langue": "Language"
   },
+  "Introuvable": {
+    "facture": "Invoice #404 · not found",
+    "title": "This page doesn't exist.",
+    "text": "It may have moved, or the address has a typo.",
+    "retour": "Back to home"
+  },
   "Theme": {
     "sombre": "Dark mode",
     "clair": "Light mode"
