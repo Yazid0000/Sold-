@@ -3,6 +3,8 @@
 Landing page d'un SaaS fictif qui relance automatiquement les factures impayées des freelances et des petites agences.
 Projet de démonstration : le produit n'existe pas et le formulaire d'essai n'envoie ni n'enregistre aucune adresse.
 
+**En ligne : https://sold-five.vercel.app**
+
 Deux pages (accueil et tarifs), en français sur `/` et en anglais sur `/en`, en mode clair et sombre.
 
 ## Ce que la page montre
